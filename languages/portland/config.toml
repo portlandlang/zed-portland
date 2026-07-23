@@ -1,0 +1,23 @@
+name = "Portland"
+grammar = "ruby"
+path_suffixes = ["pdx"]
+line_comments = ["# "]
+autoclose_before = ";:.,=}])>"
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = [
+        "comment",
+        "string",
+    ] },
+    { start = "'", end = "'", close = true, newline = false, not_in = [
+        "comment",
+        "string",
+    ] },
+]
+collapsed_placeholder = "# ..."
+tab_size = 2
+increase_indent_pattern = '(^\s*(struct|def|if|elsif|else|unless|case|when|while|together)\b|\bdo\s*(\|[^|]*\|)?\s*$)'
+decrease_indent_pattern = '^\s*(end|elsif|else|when)\b'
+word_characters = ["?", "!"]

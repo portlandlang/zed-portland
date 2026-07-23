@@ -21,7 +21,14 @@ As the languages drift, the grammar forks into `tree-sitter-portland`
 
 1. Clone this repo.
 2. In Zed: `zed: install dev extension` → pick this folder.
-3. Open any `.pdx` file.
+3. **Wait.** The first install downloads the ~70 MB wasi-sdk toolchain
+   and compiles the grammar, silently, for a few minutes. Quitting Zed
+   mid-build kills it *silently* — the extension never registers, and
+   Zed won't resume on restart. If that happens: delete
+   `~/Library/Application Support/Zed/extensions/build/wasi-sdk*` and
+   reinstall. It's done when Portland appears in the Extensions panel
+   (DEV badge). One-time cost; later rebuilds take seconds.
+4. Open any `.pdx` file — the status bar should say Portland.
 
 ## Not yet
 

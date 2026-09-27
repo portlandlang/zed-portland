@@ -18,6 +18,6 @@ brackets = [
 ]
 collapsed_placeholder = "# ..."
 tab_size = 2
-increase_indent_pattern = '(^\s*(struct|def|if|elsif|else|unless|case|when|while|together)\b|\bdo\s*(\|[^|]*\|)?\s*$)'
-decrease_indent_pattern = '^\s*(end|elsif|else|when)\b'
+increase_indent_pattern = '(^\s*(case|class|def|else|elsif|enum|if|in|module|struct|together|trait|unless|until|when|while)\b|\bdo\s*(\|[^|]*\|)?\s*$)'
+decrease_indent_pattern = '^\s*(else|elsif|end|in|when)\b'
 word_characters = ["?", "!"]
